@@ -1,0 +1,27 @@
+The project structure for the chapter "2Forces" will include a demo folder with its own `index.html` and `sketch.js` files. Here are the contents for the `index.html` and `sketch.js` files for demo1 in the "2Forces" chapter.
+
+**File: /p5js-course/p5js-course/chapters/2Forces/demo1/index.html**
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forces Demo 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+**File: /p5js-course/p5js-course/chapters/2Forces/demo1/sketch.js**
+
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+    background(220);
+    // Add forces demo code here
+}

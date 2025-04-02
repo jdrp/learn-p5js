@@ -1,0 +1,59 @@
+File path: /p5js-course/p5js-course/chapters/0Randomness/demo1/index.html
+
+File contents:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomness Demo 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+File path: /p5js-course/p5js-course/chapters/0Randomness/demo1/sketch.js
+
+File contents:
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+    background(random(255), random(255), random(255));
+}
+
+File path: /p5js-course/p5js-course/chapters/0Randomness/demo2/index.html
+
+File contents:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomness Demo 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+File path: /p5js-course/p5js-course/chapters/0Randomness/demo2/sketch.js
+
+File contents:
+let x, y;
+
+function setup() {
+    createCanvas(400, 400);
+    x = random(width);
+    y = random(height);
+}
+
+function draw() {
+    background(220);
+    fill(255, 0, 0);
+    ellipse(x, y, 50, 50);
+}

@@ -1,0 +1,29 @@
+The file /p5js-course/p5js-course/chapters/5Autonomous Agents/... is intended to contain demo files. Since you haven't specified any particular demo files for the "5Autonomous Agents" chapter yet, I will create a structure for the first demo, including an index.html and sketch.js file.
+
+Here are the contents for the files:
+
+/p5js-course/p5js-course/chapters/5Autonomous Agents/demo1/index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Agents Demo 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+/p5js-course/p5js-course/chapters/5Autonomous Agents/demo1/sketch.js:
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+    background(220);
+    // Add your autonomous agents code here
+}
+
+You can replicate this structure for additional demos within the "5Autonomous Agents" chapter by creating more demo folders (e.g., demo2, demo3, etc.) and following the same pattern for the index.html and sketch.js files.

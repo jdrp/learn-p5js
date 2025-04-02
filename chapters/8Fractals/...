@@ -1,0 +1,36 @@
+The folder for chapter 8 (Fractals) is currently empty. Below are the contents for the files you need to create for the first demo in the Fractals chapter.
+
+For the file: /p5js-course/p5js-course/chapters/8Fractals/demo1/index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractals Demo 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+For the file: /p5js-course/p5js-course/chapters/8Fractals/demo1/sketch.js
+
+function setup() {
+    createCanvas(400, 400);
+    background(255);
+    drawFractal(200, 200, 100);
+}
+
+function drawFractal(x, y, size) {
+    if (size < 1) return;
+    rectMode(CENTER);
+    rect(x, y, size, size);
+    drawFractal(x - size / 2, y - size / 2, size / 2);
+    drawFractal(x + size / 2, y - size / 2, size / 2);
+    drawFractal(x - size / 2, y + size / 2, size / 2);
+    drawFractal(x + size / 2, y + size / 2, size / 2);
+}
+
+You can create additional demos in the same manner by following this structure.

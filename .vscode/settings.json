@@ -1,0 +1,8 @@
+{
+    "files.autoSave": "onWindowChange",
+    "editor.formatOnSave": true,
+    "html.format.enable": true,
+    "javascript.format.enable": true,
+    "javascript.validate.enable": true,
+    "p5js.autoRun": true
+}

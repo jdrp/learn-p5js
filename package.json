@@ -1,0 +1,27 @@
+{
+  "name": "p5js-course",
+  "version": "1.0.0",
+  "description": "A course on p5.js with various demos organized by chapters.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server chapters/0Randomness/demo1 -o",
+    "start:randomness": "http-server chapters/0Randomness/demo1 -o",
+    "start:vectors": "http-server chapters/1Vectors/demo1 -o",
+    "start:forces": "http-server chapters/2Forces/demo1 -o",
+    "start:oscillation": "http-server chapters/3Oscillation/demo1 -o",
+    "start:particle-systems": "http-server chapters/4Particle Systems/demo1 -o",
+    "start:autonomous-agents": "http-server chapters/5Autonomous Agents/demo1 -o",
+    "start:physics-libraries": "http-server chapters/6Physics Libraries/demo1 -o",
+    "start:cellular-automata": "http-server chapters/7Cellular Automata/demo1 -o",
+    "start:fractals": "http-server chapters/8Fractals/demo1 -o",
+    "start:evolutionary-computing": "http-server chapters/9Evolutionary Computing/demo1 -o",
+    "start:neural-networks": "http-server chapters/10Neural Networks/demo1 -o",
+    "start:neuroevolution": "http-server chapters/11Neuroevolution/demo1 -o"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "p5": "^1.4.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

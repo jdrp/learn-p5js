@@ -1,0 +1,93 @@
+The file path you requested is for the `7Cellular Automata` chapter, but you did not specify a particular demo. I will create a structure for a demo folder within `7Cellular Automata` and provide the contents for the `index.html` and `sketch.js` files for a demo. 
+
+Let's create a demo folder named `demo1` within `7Cellular Automata`:
+
+File path: /p5js-course/p5js-course/chapters/7Cellular Automata/demo1/index.html
+
+Contents:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellular Automata Demo 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+File path: /p5js-course/p5js-course/chapters/7Cellular Automata/demo1/sketch.js
+
+Contents:
+let grid;
+let cols;
+let rows;
+let resolution = 10;
+
+function setup() {
+    createCanvas(400, 400);
+    cols = floor(width / resolution);
+    rows = floor(height / resolution);
+    grid = createGrid();
+}
+
+function draw() {
+    background(220);
+    displayGrid();
+    grid = nextGeneration(grid);
+}
+
+function createGrid() {
+    let arr = [];
+    for (let i = 0; i < cols; i++) {
+        arr[i] = [];
+        for (let j = 0; j < rows; j++) {
+            arr[i][j] = floor(random(2));
+        }
+    }
+    return arr;
+}
+
+function displayGrid() {
+    for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+            if (grid[i][j] === 1) {
+                fill(0);
+                rect(i * resolution, j * resolution, resolution, resolution);
+            }
+        }
+    }
+}
+
+function nextGeneration(current) {
+    let next = createGrid();
+    for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+            let state = current[i][j];
+            let neighbors = countNeighbors(current, i, j);
+            if (state === 0 && neighbors === 3) {
+                next[i][j] = 1;
+            } else if (state === 1 && (neighbors < 2 || neighbors > 3)) {
+                next[i][j] = 0;
+            } else {
+                next[i][j] = state;
+            }
+        }
+    }
+    return next;
+}
+
+function countNeighbors(grid, x, y) {
+    let sum = 0;
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+            let col = (x + i + cols) % cols;
+            let row = (y + j + rows) % rows;
+            sum += grid[col][row];
+        }
+    }
+    sum -= grid[x][y];
+    return sum;
+}

@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Demo",
+            "url": "http://localhost:5500/chapters/0Randomness/demo1/index.html",
+            "webRoot": "${workspaceFolder}/chapters/0Randomness/demo1"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Demo 2",
+            "url": "http://localhost:5500/chapters/0Randomness/demo2/index.html",
+            "webRoot": "${workspaceFolder}/chapters/0Randomness/demo2"
+        }
+    ]
+}

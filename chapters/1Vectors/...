@@ -1,0 +1,30 @@
+The file path you requested is for the demo1 folder under the 1Vectors chapter. Here are the contents for the index.html file in that folder:
+
+/p5js-course/p5js-course/chapters/1Vectors/demo1/index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 1 - Vectors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+Now, here are the contents for the sketch.js file in that folder:
+
+/p5js-course/p5js-course/chapters/1Vectors/demo1/sketch.js:
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+    background(220);
+    let v = createVector(mouseX, mouseY);
+    stroke(0);
+    strokeWeight(2);
+    line(width / 2, height / 2, v.x, v.y);
+}
