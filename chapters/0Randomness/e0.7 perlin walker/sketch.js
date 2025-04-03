@@ -13,8 +13,9 @@ class Walker {
     }
 
     step() {
-        this.x = noise(this.tx) * width;
-        this.y = noise(this.ty) * height;
+        const vel = 5;
+        this.x += (noise(this.tx) - 0.5) * vel;
+        this.y += (noise(this.ty) - 0.5) * vel;
 
         this.tx += 0.01;
         this.ty += 0.01;
